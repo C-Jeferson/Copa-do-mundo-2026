@@ -1,0 +1,48 @@
+@use 'variaveis' as*;
+
+.selecoes {
+    padding-top: 100px;
+
+    .container {
+        display: flex;
+        gap: 60px;
+    }
+
+    &__text {
+        h2 {
+            padding-bottom: 16px;
+        }
+    }
+
+    &__imgleft {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &--1 {
+        background-image: linear-gradient($colorblack, $rosa);
+    }
+    &--2 {
+        background-image: linear-gradient($rosa, $laranja);
+    }
+    &--3 {
+        background-image: linear-gradient($laranja, $verdeAzulado);
+    }
+    &--4 {
+        background-image: linear-gradient($verdeAzulado, $colorblack);
+    }
+
+    @media (max-width: 1024px) {
+        .container {
+            font-size: 14px;
+            display: block;
+            width: 90%;
+
+            img {
+                padding-top: 16px;
+                width: 100%;
+            }
+        }
+    }
+}
